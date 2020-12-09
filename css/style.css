@@ -1,0 +1,328 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sansita Swashed', serif;
+    background-color: #98011F;
+}
+
+
+/* Navigation bar BEGIN */
+
+nav {
+    background-color: white;
+    height: 85px;
+    width: 100%;
+    margin-left: 0;
+    top: 0;
+}
+
+.logo-img {
+    height: 75px;
+    width: auto;
+    margin: 2px 25px;
+}
+
+#menu-ul {
+    float: right;
+    line-height: 75px;
+    margin-right: 100px;
+    color: #990928;
+}
+
+#menu-ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+    color:#990928;
+}
+
+.nav-link {
+    color: white;
+    font-size: 17px;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 8px 13px;
+}
+
+.nav-link:hover {
+    background-color: white;
+    color: white;
+    transition: .5s;
+    box-shadow: 2px 2px 2px 1px rgba(153, 9, 40);
+}
+
+
+nav #menu-ul li a {
+    font-size: 20px;
+    color: #990928;
+}
+
+
+.burgerbtn {
+    font-size: 30px;
+    color: #990928;
+    float: right;
+    line-height: 3;
+    margin-right: 11%;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+/* Mobile STYLING BEGIN */
+
+.overskrift {
+    color: white;
+    display: flex;
+    margin: 5%;
+    align-content: center;
+    justify-content: center;
+    font-size: 270%;
+}
+
+.vind {
+    color: white;
+    font-size: 200%;
+    margin: 10%;
+}
+
+.forside {
+    width: 90%;
+    padding-left: 10%;
+    
+}
+
+ 
+.artikel {
+    color: white;
+    margin: 10%;
+    font-size: 150%;
+}
+
+.ingredients {
+    width: 100%;
+    padding-left: 7%;
+}
+
+.tand {
+    color: white;
+    font-size: 180%;
+    margin: 10%;
+}
+
+
+.splash {
+    width: 100%;
+    
+}
+
+.nisser {
+    width: 90%;
+    margin: 4%;
+}
+
+.zoom{
+    width: 80%;
+    margin: 10%;
+    display: flex;
+    justify-content: center; 
+    
+}
+
+.kloster{
+    width: 100%;
+    display: flex;
+    justify-items: center; 
+}
+
+.munke{
+   width: 90%;
+}
+
+.skilte{
+    width: 100%;
+}
+
+.varianter{
+    width: 90%;
+    margin: 5%;
+}
+
+footer {
+    left: 0;
+    bottom: 0; 
+    width: 100%;
+    background-color: #701310;
+    color: white;
+    height: 108px;
+    text-align: left;
+    padding-top: 2%;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.zoom_icon{
+    width: 25%;
+    margin-left: 7%;
+}
+
+
+
+@media(max-width: 1000px) {
+    .nav-link {
+        font-size: 15px;
+    }
+
+    .burgerbtn {
+        display: block;
+    }
+
+    #menu-ul {
+        color: #701310;
+        position: fixed;
+        width: 100%;
+        height: 80vh;
+        background-color: white;
+        top: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav #menu-ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav #menu-ul li a {
+        font-size: 20px;
+        color: rgb(153, 9, 40);
+    }
+
+    .nav-link:hover {
+        background: none;
+        color: rgb(153, 9, 40);
+    }
+
+    #check:checked ~ #menu-ul {
+        top: 80px;
+    }
+
+}
+
+/* ----------website styling starts------------- */
+
+@media(min-width: 1000px) {
+    
+    .overskrift {
+        font-size: 400%;
+        margin: 2%;
+    }
+
+    .forside {
+        width: 68%;
+        margin-left: 10%;
+    }
+    
+    .kloster{
+        width: 70%;
+        margin-left: 15%;
+    }
+    
+    .artikel{
+        margin-top: 0%;
+        margin-bottom: 2%
+    }
+    
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr ;
+  grid-template-areas:
+    "billede1 text1"
+    "text2 billede2"
+    "sidste sidste";
+}
+.billede1 { grid-area: billede1;
+    margin-top: 8%;
+    margin-left: 2%;
+    }
+.text1 { grid-area: text1; 
+    margin-top: 20%;
+    font-size: 150%;
+    }
+.text2 { grid-area: text2;
+    margin-top: 15%;
+    font-size: 150%;
+    }
+    
+.billede2 { grid-area: billede2; 
+    width: 70%;
+    }
+    
+    .tand{
+        display: flex;
+        justify-content: center;
+        font-size: 250%;
+    }
+    
+    .varianter{
+        width: 80%;
+        padding-left: 5%;
+    }
+    
+    .vind{
+        display: flex;
+        justify-content: center;
+        font-size: 350%;
+        margin: 5%;
+    }
+    
+    .kontakt{
+        font-size: 250%;
+    }
+    
+     .footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #701310;
+    color: white;
+    height: 302px;
+    text-align: left;
+    margin-top: 4%;
+    }
+    
+    .face{
+      width: 150%;
+    }
+    
+    .insta{
+        width: 150%;
+    }
+    .zoom_icon{
+        width: 15%;
+        margin-left: 8%;
+    }
+}
